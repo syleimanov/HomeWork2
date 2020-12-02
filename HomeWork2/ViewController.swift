@@ -43,3 +43,4 @@ class ViewController: UIViewController {
             }
       }
     }
+//не могу дописать функцию - не уходит почему-то в else

@@ -15,6 +15,10 @@ class ViewController: UIViewController {
     
     @IBOutlet var toggleButton: UIButton!
     
+    enum CurrentLight {
+        case red, yellow, green
+    }
+    var currentLight = CurrentLight.red
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -30,20 +34,12 @@ class ViewController: UIViewController {
     }
 
     @IBAction func tapOnButton() {
-        if toggleButton != nil {
+        if redColor != nil {
             redColor.alpha = 1
             toggleButton.setTitle("Next", for: .normal)
         } else {
-            if redColor.alpha == 1 {
-                redColor.alpha = 0.3
-                yellowColor.alpha = 1
+            redColor.alpha = 0.3
+            yellowColor.alpha = 1
             }
       }
-        
     }
-}
-
-
-
-
-
